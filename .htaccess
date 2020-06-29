@@ -1,0 +1,12 @@
+ErrorDocument 403 /jeuxvideo/view/error.php
+ErrorDocument 404 /jeuxvideo/view/error.php
+ErrorDocument 405 /jeuxvideo/view/error.php
+ErrorDocument 408 /jeuxvideo/view/error.php
+ErrorDocument 500 /jeuxvideo/view/error.php
+ErrorDocument 502 /jeuxvideo/view/error.php
+ErrorDocument 504 /jeuxvideo/view/error.php
+
+RewriteEngine On
+RewriteRule ^([^_]*)_([^_]*)\.html$ /jeuxvideo/?p=$1&a=$2 [L]
+RewriteRule ^([^_]*)_([^_]*)_([^_]*)\.html$ /jeuxvideo/?p=$1&a=$2&id=$3 [L]
+RewriteRule ^([^_]*)_([^_]*)_([^_]*)_([^_]*)_([^_]*)\.html$ /jeuxvideo/?p=$1&a=$2&postid=$3&commentId=$4&vote=$5 [L]
